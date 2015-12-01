@@ -23,7 +23,7 @@ function Expires(today) {
     'Saturday',
   ];
 
-  montNames = [
+  monthNames = [
     'January',
     'February',
     'March',
@@ -49,5 +49,6 @@ function Expires(today) {
   showMessage += day + ' ' + date + ' ' + month + ' ' + year;
   return showMessage;
 }
+
 // Finish the immediately invoked funciton expression
 }());
