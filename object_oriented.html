@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object Oriented JavaScript</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+  var movieStar = {
+    name: "Bratt Pitt",
+    speak: function() {
+      return "My name is " + this.name;
+    },
+
+    address: {
+      street: '123 Hollywood Blvd',
+      city: "Pittsburgh",
+      state: "PA"
+    }
+  };
+
+  document.write(movieStar.speak() + "<br />");
+
+  document.write(movieStar.name + " lives at " + movieStar.address.street + "<br />");
+
+  movieStar.address.country = "US";
+
+  document.write(movieStar.address.country + "<br/>");
+
+  //Create Function for a person
+  function Person(name, street) {
+    this.name = name;
+    this.street = street;
+
+    this.info = function() {
+      return "My name is " + this.name + " and I live on " + this.street;
+    }
+  }
+
+  var jennyThomas = new Person("Jenny Thomas", "567 Main Street");
+
+  document.write(jennyThomas.info() + "<br/>");
+
+  document.write("Jenny is a Person " + (jennyThomas instanceof Person) + "<br/>");
+
+  function changeName(person) {
+    person.name = "Gloria Nowth";
+  }
+
+  changeName(jennyThomas);
+
+  document.write("Jenny became " + jennyThomas.name + "<br/>");
+
+  var person1 = new Person("Paul", "123 Main");
+  var person2 = new Person("Paul", "123 Main");
+
+  document.write("Are they equal? " + "Answer is " + (person1 === person2 ) + ".<br/>");
+
+  // Result:
+  // My name is Bratt Pitt
+  // Bratt Pitt lives at 123 Hollywood Blvd
+  // US
+  // My name is Jenny Thomas and I live on 567 Main Street
+  // Jenny is a Person true
+  // Jenny became Gloria Nowth
+  // Are they equal? Answer is false.
+
+</script>
+
+</body>

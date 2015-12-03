@@ -32,5 +32,5 @@ document.write("Array : ", tomSmithy.valueOf(), + "<br/>");
 document.write("Array : ", tomSmithy.join(", "), "<br/>");
 
 // 1st index  Tom Smithy
-// Array :  [ 'Tom Smithy', '9891 Hollywood Road', 'Miami-Dade County', 'Florida' ] 
+// Array :  [ 'Tom Smithy', '9891 Hollywood Road', 'Miami-Dade County', 'Florida' ]
 // Array :  Tom Smithy, 9891 Hollywood Road, Miami-Dade County, Florida
